@@ -1,8 +1,16 @@
 let offset = 0;
 let numberOfItems = 20;
+const fileInput = document.getElementById('fileInput');
+const countInput = document.getElementById('countInput');
+const indexInput = document.getElementById('indexInput');
+const indexValue = document.getElementById('indexValue');
+const indexButton = document.getElementById('indexButton');
+const buttonText = document.getElementById('buttonText');
+indexValue.value = 3;
+countInput.value = 20;
 
 
-document.getElementById('fileInput').addEventListener('change', function (event) {
+fileInput.addEventListener('change', function (event) {
     const file = event.target.files[0];
     if (!file) return;
 
@@ -16,23 +24,23 @@ document.getElementById('fileInput').addEventListener('change', function (event)
     
 });
 
-document.getElementById('countInput').addEventListener('input', (event) => {
+countInput.addEventListener('input', (event) => {
     const content = event.target.value;
     storage.count = parseInt(content, 10);
     display();
 });
-document.getElementById('indexInput').addEventListener('input', (event) => {
+indexInput.addEventListener('input', (event) => {
     const content = event.target.value;
     storage.offset = parseInt(content, 10);
     display();
 });
-document.getElementById('indexValue').addEventListener('input', (event) => {
+indexValue.addEventListener('input', (event) => {
     const content = event.target.value;
     storage.value = parseInt(content, 10);
+    buttonText.innerText = "Press me to add " + content + " to the offset!";
 });
-document.getElementById('indexButton').addEventListener('click', (event) => {
+indexButton.addEventListener('click', (event) => {
     storage.offset += storage.value;
-    console.log("Buttonpress");
     display();
 });
 
@@ -41,6 +49,7 @@ function display() {
     let max = content.length;
     let offset = storage.offset;
     let count = storage.count;
+    document.getElementById('indexInput').value = storage.offset;
     const tbody = document.getElementById('targetBody');
     tbody.innerHTML = '';
 
@@ -48,7 +57,11 @@ function display() {
         let num = i + offset;
         if (num >= max) {
             num -= max;
-            offset = offset - max;
+            offset -= max;
+        }
+        if (num < 0) {
+            num += max;
+            offset += max;
         }
         const row = document.createElement('tr');
 

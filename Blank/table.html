@@ -6,28 +6,32 @@
 </head>
 <body style="background-color: #FFFFFF">
     <a href="home.html">Return</a>
-    <div class= "blue box">
+    <div class="blue box">
         <label for="fileInput"> Upload .txt file for the table</label>
+        <br /><br />
         <input type="file" id="fileInput" accept="txt" />
     </div>
     <div class= "blue box">
-        <label for="countInput"> Enter how many items you want to select (default 20) </label>
+        <label for="countInput"> Enter how many items you want to select  </label>
+        <br /><br />
         <input type="text" id="countInput" />
     </div>
-    <div class="blue square">
+    <div class="blue square" style="height:300px">
         <div class="glass box">
-            <label for="indexInput"> Enter what offset you would like (default 0) </label>
+            <label for="indexInput"> Enter what offset you would like     </label>
+            <br /><br />
             <input type="text" id="indexInput" />
         </div>
 
         <div class="glass box">
-            <label for="indexValue"> Enter how much offset the button should add (default 3) </label>
+            <label for="indexValue"> Enter how much offset the button should add  </label>
+            <br /><br />
             <input type="text" id="indexValue" />
         </div>
 
         <div class="centering glass box">
             <button id="indexButton" class="streach95">
-                <div class="streach95">
+                <div class="streach95" id="buttonText" style="font-family:'Sitka Display'; font-size:250%">
                     Press me to add to the index!
                 </div>    
             </button>
