@@ -1,0 +1,32 @@
+.box {
+    border: 2px solid;
+    margin: 1%;
+    padding : 1%;
+}
+.square {
+    border: 2px solid;
+    margin: 1%;
+}
+.blue {
+    background-color: #eeeeff80;
+    border-color: #9999ee;
+}
+.red {
+    background-color: #ffeeee80;
+    border-color: #ee9999;
+}
+.green {
+    background-color: #eeffee80;
+    border-color: #99ee99;
+}
+.glass {
+    background-color: #ffffff80;
+    border-color: #ffffff00;
+}
+.centering{
+    text-align:center;
+}
+.streach95{
+    width : 95%;
+    height : 95%;
+}

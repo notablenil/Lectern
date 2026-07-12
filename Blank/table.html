@@ -2,35 +2,50 @@
 <html>
 <head>
     <title>Offset Table</title>
+    <link rel="stylesheet" href="generic.css" />
 </head>
 <body style="background-color: #FFFFFF">
     <a href="home.html">Return</a>
-    <div>
+    <div class= "blue box">
         <label for="fileInput"> Upload .txt file for the table</label>
         <input type="file" id="fileInput" accept="txt" />
     </div>
-    <div>
+    <div class= "blue box">
         <label for="countInput"> Enter how many items you want to select (default 20) </label>
         <input type="text" id="countInput" />
     </div>
-    <div>
-        <label for="indexInput"> Enter what offset you would like (default 0) </label>
-        <input type="text" id="indexInput" />
-        <label for="indexValue"> Enter how much offset the button should add (default 3) </label>
-        <input type="text" id="indexValue" />
-        <label for="indexButton"> Press me to add to the index!</label>
-        <input type="button" id="indexButton" />
+    <div class="blue square">
+        <div class="glass box">
+            <label for="indexInput"> Enter what offset you would like (default 0) </label>
+            <input type="text" id="indexInput" />
+        </div>
+
+        <div class="glass box">
+            <label for="indexValue"> Enter how much offset the button should add (default 3) </label>
+            <input type="text" id="indexValue" />
+        </div>
+
+        <div class="centering glass box">
+            <button id="indexButton" class="streach95">
+                <div class="streach95">
+                    Press me to add to the index!
+                </div>    
+            </button>
+                
+        </div>
     </div>
 
-    <table id="targetContent">
-        <thread>
-            <tr>
-                <th> Roll </th>
-                <th> Value </th>
-            </tr>
-        </thread>
-        <tbody id="targetBody"></tbody>
-    </table>
+    <div class="red box">
+        <table id="targetContent">
+            <thread>
+                <tr>
+                    <th> Roll </th>
+                    <th> Value </th>
+                </tr>
+            </thread>
+            <tbody id="targetBody"></tbody>
+        </table>
+    </div>
 
     <script src="OffsetTable.js"></script>
 
