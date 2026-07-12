@@ -55,11 +55,11 @@ function display() {
 
     for (let i = 0; i < count; i++) {
         let num = i + offset;
-        if (num >= max) {
+        while (num >= max) {
             num -= max;
             offset -= max;
         }
-        if (num < 0) {
+        while (num < 0) {
             num += max;
             offset += max;
         }
