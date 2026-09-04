@@ -166,7 +166,7 @@ level.addEventListener("change", function (event) {
     Data.pb = Math.round((Data.level - 1) / 4) + 2;
     redo("all");
 });
-const REDOALL = document.getElementById('00');
+const REDOALL = document.getElementById('REDOALL');
 REDOALL.addEventListener("click", function (event) {
     redo("all");
 });
