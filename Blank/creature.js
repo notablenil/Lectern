@@ -163,7 +163,7 @@ const level = document.getElementById('Level');
 level.addEventListener("change", function (event) {
     if (level.value == null) level.value = 0;
     Data.level = Number(level.value);
-    Data.pb = Math.round((Data.level - 1) / 4) + 2;
+    Data.pb = Math.floor((Data.level - 1) / 4) + 2;
     redo("all");
 });
 const REDOALL = document.getElementById('REDOALL');
