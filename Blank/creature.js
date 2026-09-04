@@ -164,7 +164,7 @@ level.addEventListener("change", function (event) {
     if (level.value == null) level.value = 0;
     Data.level = Number(level.value);
     Data.pb = Math.round((Data.level - 1) / 4) + 2;
-    redo("defense");
+    redo("all");
 });
 
 const but00 = document.getElementById('00');
