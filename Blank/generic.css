@@ -38,3 +38,15 @@
     width : 95%;
     height : 95%;
 }
+.wid95{
+    width: 95%;
+}
+.wid45 {
+    width: 45%;
+}
+.parent {
+    display: flex;
+}
+.parent > div{
+    width:45%;
+}

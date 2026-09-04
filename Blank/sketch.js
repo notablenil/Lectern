@@ -596,5 +596,5 @@ const drag = new DragStorage();
 renderer.build();
 let trash = new Node(0, 0, 0);
 nodes.Push(trash);
-nodes.CreateChained(new vector3(0, 0, 100), 20);
+nodes.CreateChained(new vector3(0, 0, 100), 100);
 requestAnimationFrame(loop);

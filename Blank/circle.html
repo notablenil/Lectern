@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Magic Circle</title>
+    <link rel="stylesheet" href="generic.css" />
+    <style>
+        #c{
+            width:99%;
+            height:auto;
+            aspect-ratio:1/1;
+        }
+        input{
+            width: 98%;
+        }
+
+    </style>
+</head>
+<body style="background-color: #FFFFFF">
+
+    <a href="home.html">Return</a>
+    <div class="parent">
+        <div class="blue box ">
+            <div class="blue box ">
+                <label for="innerCountInput"> Enter how many inner points you would like</label>
+                <br /><br />
+                <input type="text" id="countInput" />
+            </div>
+            <div class="blue box ">
+                <label for="innerCountInput"> Enter labels for inner points (overwrites above)</label>
+                <br /><br />
+                <input type="text" id="countInputText" />
+            </div>
+            <div class="blue box">
+                <label for="outerCountInput"> Enter how many outer points you would like</label>
+                <br /><br />
+                <input type="text" id="outerCount" />
+            </div>
+            <div class="blue box">
+                <label for="outerCountInput"> Enter labels for the outer points (overwrites above)</label>
+                <br /><br />
+                <input type="text" id="outerCountText" />
+            </div>
+
+            <div class="blue square">
+
+                <div class="sect box">
+                    <label for="innerValues"> Enter the order of inner points (separate with spaces)</label>
+                    <br /><br />
+                    <input type="text" id="innerOrder" />
+                </div>
+
+                <div class="sect box">
+                    <label for="outerValues"> Enter the active outer points (separate with spaces)</label>
+                    <br /><br />
+                    <input type="text" id="outerOrder" />
+                </div>
+                <div class=" sect box">
+                    <select name="mode" id="modeSelect">
+                        <option value="0">clocklike</option>
+                        <option value="1">planar</option>
+                    </select>
+                </div>
+                
+
+                <div class="sect box">
+                    <p id="error">
+
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    <div class="red box">
+        <div class="centering">
+        <canvas id="c" width="1000" height="1000">
+        </canvas>
+            </div>
+    </div>
+    </div>
+    <script src="circle.js"></script>
+</body>
+</html>
