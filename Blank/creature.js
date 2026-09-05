@@ -130,7 +130,7 @@ function redo(item) {
             let feat = "";
             if (Data.codeA[2] == "1") feat = feat + "Blindsight : Your companion gains a Blindsight of 10ft.<br/>";
             if (Data.codeA[6] == "1") feat = feat + "Pack Tactics : Your companion has advantage on an attack roll against a creature if at least one of the beast's allies is within 5 ft. of the creature and the ally isn't incapacitated.<br/>";
-            if (Data.codeA[8] == "1") feat = feat + "Pounce/Charge : If the beast moves at least 20 ft. straight towards a creature and then hits it with an attack on the same turn, that target must succeed on a Strength saving throw with a DC equal to your Spell Save DV or be knocked Prone.<br/>"
+            if (Data.codeA[8] == "1") feat = feat + "Pounce/Charge : If the beast moves at least 20 ft. straight towards a creature and then hits it with an attack on the same turn, that target must succeed on a Strength saving throw with a DC equal to your Spell Save DC or be knocked Prone.<br/>"
             if (Data.codeA[11] == "1") feat = feat + "Sneaky : Your Companion gains proficiency in the Stealth and Deception skills.<br/>";
             if (Data.codeA[12] == "1") feat = feat + "Spider Climb : Your companion can climb difficult durfaces, including upside down ceilings, without needing to make an ability check, and ignores movement restrictions caused by webbing/<br/>";
             features.innerHTML = feat;
